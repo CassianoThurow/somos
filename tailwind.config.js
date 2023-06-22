@@ -12,6 +12,15 @@ export default {
         'primary-orange': '#FF7B1C',
         'primary-gray-light': '#F1F1F1',
       },
+      borderRadius: {
+        '20': '20px',
+      },
+      fontFamily: {
+        'montserrat': ['Montserrat', 'sans-serif'],
+      },
+      lineHeight: {
+        '48': '3rem',
+      }
     },
   },
   plugins: [],
