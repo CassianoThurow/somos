@@ -34,23 +34,23 @@ const Navbar = () => {
   return (
     <>
       <nav className={`fixed w-full top-0 z-50 ${isMobile || scrolled ? 'bg-white' : 'bg-transparent'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto p-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <img src={isMobile ? LogoBlack : (scrolled ? LogoBlack : LogoWhite)} alt="Logo da 99" />
               </div>
               <div className="hidden md:block">
-                <div className="ml-10 flex items-baseline space-x-4">
+                <div className="ml-9 flex items-baseline">
                   <a
                     href="#"
-                    className={`px-3 py-2 rounded-md text-sm font-medium ${isMobile || scrolled ? 'text-black' : 'text-white'}`}
+                    className={`text-sm font-normal font-montserrat ${scrolled ? 'text-primary-black' : 'text-white'}`}
                   >
                     Parcerias Nacionais
                   </a>
                   <a
                     href="#"
-                    className={`px-3 py-2 rounded-md text-sm font-medium ${isMobile || scrolled ? 'text-black' : 'text-white'}`}
+                    className={`ml-6 text-sm font-normal font-montserrat ${scrolled ? 'text-primary-black' : 'text-white'}`}
                   >
                     Parcerias Regionais
                   </a>
@@ -59,7 +59,7 @@ const Navbar = () => {
             </div>
             <div className="hidden md:block">
               <button
-                className={`px-4 py-2 rounded-lg text-sm font-medium ${isMobile || scrolled ? 'bg-black text-white' : 'bg-white text-black'}`}
+                className={`px-6 py-4 rounded-20 border-2 text-sm font-semibold ${isMobile || scrolled ? 'bg-white text-primary-black  border-primary-black'  : 'bg-transparent text-white border-white'}`}
               >
                 Quero ser motorista
               </button>

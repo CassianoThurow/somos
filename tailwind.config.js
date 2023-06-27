@@ -11,6 +11,7 @@ export default {
         'primary-gray-dark': '#212121',
         'primary-orange': '#FF7B1C',
         'primary-gray-light': '#F1F1F1',
+        'primary-black' : "#1A1B1A",
       },
       borderRadius: {
         '20': '20px',
@@ -20,6 +21,9 @@ export default {
       },
       lineHeight: {
         '48': '3rem',
+      },
+      backgroundImage :{
+        'custom-gradient': 'linear-gradient(212deg, #000 0%, #000 1.87%, #FFF 100%)'
       }
     },
   },
