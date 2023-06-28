@@ -24,6 +24,9 @@ export default {
       },
       backgroundImage :{
         'custom-gradient': 'linear-gradient(212deg, #000 0%, #000 1.87%, #FFF 100%)'
+      },
+      spacing: {
+        '444': '27.75rem',
       }
     },
   },

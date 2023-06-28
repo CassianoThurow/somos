@@ -44,13 +44,13 @@ const Navbar = () => {
                 <div className="ml-9 flex items-baseline">
                   <a
                     href="#"
-                    className={`text-sm font-normal font-montserrat ${scrolled ? 'text-primary-black' : 'text-white'}`}
+                    className={`text-base font-normal font-montserrat cursor-pointer hover:text-primary-orange ${scrolled ? 'text-primary-black' : 'text-white'}`}
                   >
                     Parcerias Nacionais
                   </a>
                   <a
                     href="#"
-                    className={`ml-6 text-sm font-normal font-montserrat ${scrolled ? 'text-primary-black' : 'text-white'}`}
+                    className={`ml-6 text-base font-normal font-montserrat cursor-pointer hover:text-primary-orange ${scrolled ? 'text-primary-black' : 'text-white'}`}
                   >
                     Parcerias Regionais
                   </a>
@@ -59,7 +59,7 @@ const Navbar = () => {
             </div>
             <div className="hidden md:block">
               <button
-                className={`px-6 py-4 rounded-20 border-2 text-sm font-semibold ${isMobile || scrolled ? 'bg-white text-primary-black  border-primary-black'  : 'bg-transparent text-white border-white'}`}
+                className={`px-6 py-4 rounded-20 border-2 text-sm font-semibold ${isMobile || scrolled ? 'bg-white text-primary-black  border-primary-black'  : 'hover:bg-white hover:border-black hover:text-black bg-transparent text-white border-white'}`}
               >
                 Quero ser motorista
               </button>

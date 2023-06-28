@@ -1,21 +1,26 @@
 
-// eslint-disable-next-line react/prop-types
-const Card = ({ image, title, description }) => {
+function Card({ image, title, description, showExtraButton }) {
   return (
-    <div className="flex flex-col items-center bg-white shadow-md overflow-hidden max-w-xs mx-auto">
-      <img className="w-full h-64 object-cover object-center rounded-t-lg" src={image} alt={title} />
-      <div className="p-6">
-        <h2 className="text-xl font-bold mb-2">{title}</h2>
-        <p className="text-sm text-gray-700 mb-4">{description}</p>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-2">
-          Button 1
-        </button>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          Button 2
-        </button>
+    <div className="container bg-white justify-between mx-auto overflow-hidden m-4 flex md:flex-row flex-col">
+      <img className="h-96 w-full md:w-1/2 object-cover rounded-lg" src="../src/assets/teste2.png" alt={title}/>
+      <div className="p-4 flex flex-col justify-between flex-grow">
+        <div>
+          <h2 className="font-bold text-2xl mb-2">{title}</h2>
+          <p className="text-gray-700 text-sm">{description}</p>
+        </div>
+        <div className="mt-4 flex md:flex-row flex-col">
+          <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-400">
+            Botão Principal
+          </button>
+          { showExtraButton &&
+            <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-400">
+              Botão Extra
+            </button>
+          }
+        </div>
       </div>
     </div>
   );
-};
+}
 
 export default Card;
