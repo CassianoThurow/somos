@@ -1,5 +1,6 @@
 import './App.css'
 import Card from './components/Card'
+import Footer from './components/Footer'
 import Heroteste from './components/Herotest'
 import Navbar from './components/Navbar'
 
@@ -15,6 +16,7 @@ function App() {
         description={"teste"}
         showExtraButton
       />
+      <Footer />
     </>
   )
 }
