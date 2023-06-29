@@ -1,8 +1,4 @@
 import { useState, useEffect } from "react";
-import LogoWhite from '../assets/99LogoWhite.svg';
-import LogoBlack from '../assets/99Logo.svg';
-import openIcon from '../assets/hamburger.svg';
-import closeIcon from '../assets/close.svg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,35 +18,46 @@ const Navbar = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
     <>
-      <nav className={`fixed w-full top-0 z-50 ${isMobile || scrolled ? 'bg-white' : 'bg-transparent'}`}>
+      <nav
+        className={`fixed w-full top-0 z-50 ${
+          isMobile || scrolled ? "bg-white" : "bg-transparent"
+        }`}
+      >
         <div className="container mx-auto p-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <img src={isMobile ? LogoBlack : (scrolled ? LogoBlack : LogoWhite)} alt="Logo da 99" />
+                <img
+                  src={isMobile ? "/99Logo.svg" : scrolled ? "/99Logo.svg" : "/99LogoWhite.svg"}
+                  alt="Logo da 99"
+                />
               </div>
               <div className="hidden md:block">
                 <div className="ml-9 flex items-baseline">
                   <a
                     href="#"
-                    className={`text-base font-normal font-montserrat cursor-pointer hover:text-primary-orange ${scrolled ? 'text-primary-black' : 'text-white'}`}
+                    className={`text-base font-normal font-montserrat cursor-pointer hover:text-primary-orange ${
+                      scrolled ? "text-primary-black" : "text-white"
+                    }`}
                   >
                     Parcerias Nacionais
                   </a>
                   <a
                     href="#"
-                    className={`ml-6 text-base font-normal font-montserrat cursor-pointer hover:text-primary-orange ${scrolled ? 'text-primary-black' : 'text-white'}`}
+                    className={`ml-6 text-base font-normal font-montserrat cursor-pointer hover:text-primary-orange ${
+                      scrolled ? "text-primary-black" : "text-white"
+                    }`}
                   >
                     Parcerias Regionais
                   </a>
@@ -59,14 +66,18 @@ const Navbar = () => {
             </div>
             <div className="hidden md:block">
               <button
-                className={`px-6 py-4 rounded-20 border-2 text-sm font-semibold ${isMobile || scrolled ? 'bg-white text-primary-black  border-primary-black'  : 'hover:bg-white hover:border-black hover:text-black bg-transparent text-white border-white'}`}
+                className={`px-6 py-4 rounded-20 border-2 text-sm font-semibold ${
+                  isMobile || scrolled
+                    ? "bg-white text-primary-black  border-primary-black"
+                    : "hover:bg-white hover:border-black hover:text-black bg-transparent text-white border-white"
+                }`}
               >
                 Quero ser motorista
               </button>
             </div>
             <div className="md:hidden flex items-center">
               <button onClick={toggleMenu}>
-                <img src={isOpen ? closeIcon : openIcon}/>
+                <img src={isOpen ? "/close" : "/hamburger"} />
               </button>
             </div>
           </div>
@@ -89,9 +100,7 @@ const Navbar = () => {
             </a>
           </div>
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 absolute bottom-10 w-full flex">
-            <button
-              className="bg-primary-orange text-primary-gray-light m-auto py-4 px-9 rounded-20 text-base font-montserrat font-bold"
-            >
+            <button className="bg-primary-orange text-primary-gray-light m-auto py-4 px-9 rounded-20 text-base font-montserrat font-bold">
               Quero ser motorista
             </button>
           </div>

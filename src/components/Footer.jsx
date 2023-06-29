@@ -18,13 +18,13 @@ const Footer = () => {
   return (
     <div className=" flex flex-col bg-primary-black p-6">
       <div className="container flex mx-auto flex-col items-center justify-center gap-4 mb-6">
-        <img src="../src/assets/99logowhite.svg" alt="logo" className="h-16 w-16" />
+        <img src="./99LogoWhite.svg" alt="logo" className="h-16 w-16" />
         <button className="bg-primary-orange text-base text-primary-gray-light font-bold py-4 px-6 rounded-20 font-montserrat">
           Seja motorista parceiro
         </button>
       </div>
       <div className="container mx-auto mb-20">
-        <img className="" src="../src/assets/arrow.svg" alt="" />
+        <img className="" src="./arrow.svg" alt="" />
       </div>
       <div className="container mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
         <div className="lg:w-52 sm:w-full">
@@ -62,11 +62,11 @@ const Footer = () => {
           <div className="lg:w-48 sm:w-full">
             <p className="font-montserrat text-primary-gray-light text-xl">Baixe o app e viaje de maneira rápida, simples e segura. </p>
             <a className="flex mt-4 text-primary-orange font-montserrat text-xl text-bold" href="#">
-              <img className="mr-2" src="../src/assets/appstore.svg" alt="Icone da App Store"/> 
+              <img className="mr-2" src="./appstore.svg" alt="Icone da App Store"/> 
               App Store
             </a>
             <a className="flex mt-4 text-primary-orange font-montserrat text-xl text-bold" href="#">
-              <img className="mr-2" src="../src/assets/googleplay.svg" alt="Icone da App Store"/> 
+              <img className="mr-2" src="./googleplay.svg" alt="Icone da App Store"/> 
               Google Play
             </a>
           </div>
@@ -76,11 +76,11 @@ const Footer = () => {
                 Acompanhe a  99 nas redes sociais 
               </p>
               <div className="flex gap-1 mt-4 items-center">
-                <a href="#"><img src="../src/assets/facebook.svg" alt="" /></a>
-                <a href="#"><img src="../src/assets/twitter.svg" alt="" /></a>
-                <a href="#"><img src="../src/assets/linkedin.svg" alt="" /></a>
-                <a href="#"><img src="../src/assets/youtube.svg" alt="" /></a>
-                <a href="#"><img src="../src/assets/instagram.svg" alt="" /></a>
+                <a href="#"><img src="./facebook.svg" alt="" /></a>
+                <a href="#"><img src="./twitter.svg" alt="" /></a>
+                <a href="#"><img src="./linkedin.svg" alt="" /></a>
+                <a href="#"><img src="./youtube.svg" alt="" /></a>
+                <a href="#"><img src="./instagram.svg" alt="" /></a>
               </div>
             </div>
           )}
@@ -92,11 +92,11 @@ const Footer = () => {
         Acompanhe a  99 nas redes sociais 
       </p>
       <div className="flex gap-2 items-center">
-        <a href="#"><img src="../src/assets/facebook.svg" alt="" /></a>
-        <a href="#"><img src="../src/assets/twitter.svg" alt="" /></a>
-        <a href="#"><img src="../src/assets/linkedin.svg" alt="" /></a>
-        <a href="#"><img src="../src/assets/youtube.svg" alt="" /></a>
-        <a href="#"><img src="../src/assets/instagram.svg" alt="" /></a>
+        <a href="#"><img src="./facebook.svg" alt="" /></a>
+        <a href="#"><img src="./twitter.svg" alt="" /></a>
+        <a href="#"><img src="./linkedin.svg" alt="" /></a>
+        <a href="#"><img src="./youtube.svg" alt="" /></a>
+        <a href="#"><img src="./instagram.svg" alt="" /></a>
       </div>
     </div>
           )}
@@ -105,7 +105,7 @@ const Footer = () => {
       <div className="text-center mx-auto mt-16 w-52">
         <div className="flex justify-center">
           <p className="text-base text-primary-gray-light font-montserrat">Brasil </p>
-          <img className="ml-4" src="../src/assets/brasil.svg"/>
+          <img className="ml-4" src="./brasil.svg"/>
         </div>
         <p className="text-base text-primary-orange font-montserrat font-bold">DiDi Global</p>
         <p className="mt-4 text-sm text-primary-gray-light font-montserrat"> Termos de uso e Privacidade © 2022 99 Tecnologia Ltda</p>

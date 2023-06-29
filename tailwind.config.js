@@ -10,14 +10,18 @@ export default {
         'primary-yellow': '#FFDD00',
         'primary-gray-dark': '#212121',
         'primary-orange': '#FF7B1C',
+        'primary-orange-light': '#FF8200',
         'primary-gray-light': '#F1F1F1',
+        'primary-gray': "#DADADA",
         'primary-black' : "#1A1B1A",
+        'primary-white': "#F6F6F6",
       },
       borderRadius: {
         '20': '20px',
       },
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif'],
+        'montserrat-bold': ['Montserrat-Bold', 'sans-serif']
       },
       lineHeight: {
         '48': '3rem',
