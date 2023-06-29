@@ -12,13 +12,13 @@ function App() {
       <section className="bg-primary-yellow">
         <div className="container mx-auto py-24 flex flex-col lg:flex-row items-start">
           <div className="lg:flex lg:flex-grow-1 lg:flex-basis-0 mx-auto lg:w-[400px] w-full sm:px-5">
-            <p className="font-montserrat text-primary-black font-semibold text-4xl leading-10">
+            <p className="font-montserrat text-primary-black font-semibold text-4xl leading-10 px-5">
               Sendo motorista parceiro da 99, você tem vantagens exclusivas.
             </p>
           </div>
 
           <div className="hidden lg:flex lg:flex-grow-1 lg:flex-basis-0 mx-auto">
-            <img src="./arrow2.svg" /> {/* componente da imagem */}
+            <img src="./arrow2.svg" />
           </div>
 
           <div className="lg:flex lg:flex-grow-1 lg:flex-basis-0 mx-auto lg:w-[500px] w-full mt-4 px-5 lg:px-0 lg:mt-0">
@@ -33,16 +33,16 @@ function App() {
         </div>
       </section>
       <section className="bg-primary-gray">
-      <div className="container mx-auto flex py-24 px-5 flex-col lg:flex-row justify-between ">
-        <img className="rounded-20" src="./info.png" alt="" />
-        <div className="w-full lg:w-[450px] flex flex-col justify-between">
-          <p className="font-montserrat-bold text-primary-black text-4xl">Conheça a ação exclusiva para aluguel</p>
-          <p>Alugando seu carro com um de nossos parceiros, você conta com 7%* de desconto na renovação do seu contrato de aluguel e mais R$300*, realizando 300 corridas mensais.*</p>
-          <p>*Válido por 3 meses.</p>
-          <a href="">Confira condições</a>
-        </div>
-      </div>
-      </section>
+  <div className="container mx-auto flex py-24 px-5 flex-col lg:flex-row justify-between space-y-5 lg:space-y-0">
+    <img className="rounded-20" src="./info.png" alt="" />
+    <div className="w-full lg:w-[450px] flex flex-col justify-between">
+      <p className="font-montserrat-bold text-primary-black text-4xl mb-4">Conheça a ação exclusiva para aluguel</p>
+      <p className="font-montserrat text-xl text-primary-black leading-7 mb-4">Alugando seu carro com um de nossos parceiros, você conta com 7%* de desconto na renovação do seu contrato de aluguel e mais R$300*, realizando 300 corridas mensais.*</p>
+      <p className="font-montserrat text-sm text-primary-black leading-7 mb-4">*Válido por 3 meses.</p>
+      <a className=" bg-primary-orange-light font-montserrat-bold text-primary-white px-6 py-4 rounded-20 lg:w-60 w-full text-center" href="">Confira condições</a>
+    </div>
+  </div>
+</section>
       <section className="bg-primary-yellow">
         <div className="container mx-auto flex py-24 px-5 flex-col-reverse lg:flex-row justify-between items-center">
           <div className="lg:max-w-[360px] max-w-[312px] lg:items-start flex flex-col justify-center items-center">
