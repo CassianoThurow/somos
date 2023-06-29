@@ -77,7 +77,7 @@ const Navbar = () => {
             </div>
             <div className="md:hidden flex items-center">
               <button onClick={toggleMenu}>
-                <img src={isOpen ? "/close" : "/hamburger"} />
+                <img src={isOpen ? "/close.svg" : "/hamburger.svg"} />
               </button>
             </div>
           </div>
