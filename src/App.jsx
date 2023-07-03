@@ -1,10 +1,12 @@
 import "./App.css";
+import Card from "./components/Card";
 import Footer from "./components/Footer";
 import Heroteste from "./components/Herotest";
 import Navbar from "./components/Navbar";
+import { useModal } from "../src/context/ModalContext"
 
 function App() {
-
+  const { openModal } = useModal();
   return (
     <>
       <Navbar />
@@ -32,24 +34,49 @@ function App() {
           </div>
         </div>
       </section>
+      <section>
+        <Card 
+          showExtraButton
+        />
+      </section>
       <section className="bg-primary-gray">
-  <div className="container mx-auto flex py-24 px-5 flex-col lg:flex-row justify-between space-y-5 lg:space-y-0">
-    <img className="rounded-20" src="./info.png" alt="" />
-    <div className="w-full lg:w-[450px] flex flex-col justify-between">
-      <p className="font-montserrat-bold text-primary-black text-4xl mb-4">Conheça a ação exclusiva para aluguel</p>
-      <p className="font-montserrat text-xl text-primary-black leading-7 mb-4">Alugando seu carro com um de nossos parceiros, você conta com 7%* de desconto na renovação do seu contrato de aluguel e mais R$300*, realizando 300 corridas mensais.*</p>
-      <p className="font-montserrat text-sm text-primary-black leading-7 mb-4">*Válido por 3 meses.</p>
-      <a className=" bg-primary-orange-light font-montserrat-bold text-primary-white px-6 py-4 rounded-20 lg:w-60 w-full text-center" href="">Confira condições</a>
-    </div>
-  </div>
-</section>
+        <div className="container mx-auto flex py-24 px-5 flex-col lg:flex-row justify-between space-y-5 lg:space-y-0">
+          <img className="rounded-20" src="./info.png" alt="" />
+          <div className="w-full lg:w-[450px] flex flex-col justify-between">
+            <p className="font-montserrat-bold text-primary-black text-4xl mb-4">
+              Conheça a ação exclusiva para aluguel
+            </p>
+            <p className="font-montserrat text-xl text-primary-black leading-7 mb-4">
+              Alugando seu carro com um de nossos parceiros, você conta com 7%*
+              de desconto na renovação do seu contrato de aluguel e mais R$300*,
+              realizando 300 corridas mensais.*
+            </p>
+            <p className="font-montserrat text-sm text-primary-black leading-7 mb-4">
+              *Válido por 3 meses.
+            </p>
+            <button
+              onClick={() => openModal('modal2', 'Esta é a modal 2')}
+              className=" bg-primary-orange-light font-montserrat-bold text-primary-white px-6 py-4 rounded-20 lg:w-60 w-full text-center"
+              href=""
+            >
+              Confira condições
+            </button>
+          </div>
+        </div>
+      </section>
       <section className="bg-primary-yellow">
         <div className="container mx-auto flex py-24 px-5 flex-col-reverse lg:flex-row justify-between items-center">
           <div className="lg:max-w-[360px] max-w-[312px] lg:items-start flex flex-col justify-center items-center">
             <p className="font-montserrat text-primary-black lg:text-4xl text-3xl  lg: mt-10 leading-10">
-              <strong className="font-montserrat-bold">Ficou com dúvida?</strong>
-              Fale com a gente!</p>
-              <a href="#" className="mt-10 flex bg-primary-orange-light font-montserrat-bold text-primary-white px-6 py-4 rounded-20 lg:w-60 w-full justify-center">
+              <strong className="font-montserrat-bold">
+                Ficou com dúvida?
+              </strong>
+              Fale com a gente!
+            </p>
+            <a
+              href="#"
+              className="mt-10 flex bg-primary-orange-light font-montserrat-bold text-primary-white px-6 py-4 rounded-20 lg:w-60 w-full justify-center"
+            >
               <img className="mr-2" src="./outline.svg" alt="" />
               Fale conosco
             </a>
