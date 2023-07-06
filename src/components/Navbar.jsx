@@ -7,23 +7,31 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  
+    if (!isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
   };
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 0);
     };
-
+  
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
-
+  
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
-
+  
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
+      
+      document.body.classList.remove("overflow-hidden");
     };
   }, []);
 
@@ -31,7 +39,7 @@ const Navbar = () => {
     <>
       <nav
         className={`fixed w-full top-0 z-50 ${
-          isMobile || scrolled ? "bg-white" : "bg-transparent"
+          isMobile || scrolled ? "bg-primary-yellow" : "bg-primary-yellow"
         }`}
       >
         <div className="container mx-auto p-4 sm:px-6 lg:px-8">

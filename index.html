@@ -9,5 +9,22 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script
+      src="https://unpkg.com/blip-chat-widget"
+      type="text/javascript"
+    ></script>
+    <script>
+      (function () {
+        window.onload = function () {
+          new BlipChat()
+            .withAppKey(
+              "ZHJpdmVybGFicHJkOjlkODRhNGI4LTkxNTYtNDhjMC05ZmI3LWI1ZmRlMmU5ODZmOA=="
+            )
+            .withButton({ color: "#FF8200", icon: "./faq.svg" })
+            .withCustomCommonUrl("https://app99food.chat.blip.ai/")
+            .build();
+        };
+      })();
+    </script>
   </body>
 </html>

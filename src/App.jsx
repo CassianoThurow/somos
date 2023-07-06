@@ -1,3 +1,5 @@
+import {useState, useEffect} from 'react';
+import axios from 'axios';
 import "./App.css";
 import Card from "./components/Card";
 import Footer from "./components/Footer";
@@ -7,6 +9,26 @@ import { useModal } from "../src/context/ModalContext"
 
 function App() {
   const { openModal } = useModal();
+
+  const [data, setData] = useState(null);
+
+    useEffect(() => {
+      axios.get('http://localhost/api/home', {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer 99s-b3d2f4a0-0b9a-11eb-9a03-0242ac130003',
+        },
+      })
+      .then(response => {
+        setData(response.data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    }, []);
+
+  console.log(data)
+
   return (
     <>
       <Navbar />
