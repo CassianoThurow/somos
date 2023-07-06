@@ -2,36 +2,23 @@ import { useState, useEffect } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-  
-    if (!isOpen) {
-      document.body.classList.add("overflow-hidden");
-    } else {
-      document.body.classList.remove("overflow-hidden");
-    }
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 0);
-    };
-  
+ 
+
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
-  
-    window.addEventListener("scroll", handleScroll);
+
     window.addEventListener("resize", handleResize);
-  
+
     return () => {
-      window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
-      
-      document.body.classList.remove("overflow-hidden");
     };
   }, []);
 
@@ -39,7 +26,7 @@ const Navbar = () => {
     <>
       <nav
         className={`fixed w-full top-0 z-50 ${
-          isMobile || scrolled ? "bg-primary-yellow" : "bg-primary-yellow"
+          isMobile  ? "bg-white" : "bg-primary-yellow"
         }`}
       >
         <div className="container mx-auto p-4 sm:px-6 lg:px-8">
@@ -47,7 +34,7 @@ const Navbar = () => {
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <img
-                  src={isMobile ? "/99Logo.svg" : scrolled ? "/99Logo.svg" : "/99LogoWhite.svg"}
+                  src={ "/99Logo.svg"}
                   alt="Logo da 99"
                 />
               </div>
@@ -55,17 +42,13 @@ const Navbar = () => {
                 <div className="ml-9 flex items-baseline">
                   <a
                     href="#"
-                    className={`text-base font-normal font-montserrat cursor-pointer hover:text-primary-orange ${
-                      scrolled ? "text-primary-black" : "text-white"
-                    }`}
+                    className={"text-base font-normal font-montserrat cursor-pointer hover:text-primary-orange text-primary-black"}
                   >
                     Parcerias Nacionais
                   </a>
                   <a
                     href="#"
-                    className={`ml-6 text-base font-normal font-montserrat cursor-pointer hover:text-primary-orange ${
-                      scrolled ? "text-primary-black" : "text-white"
-                    }`}
+                    className={"ml-6 text-base font-normal font-montserrat cursor-pointer hover:text-primary-orange text-primary-black"}
                   >
                     Parcerias Regionais
                   </a>
@@ -74,11 +57,9 @@ const Navbar = () => {
             </div>
             <div className="hidden md:block">
               <button
-                className={`px-6 py-4 rounded-20 border-2 text-sm font-semibold ${
-                  isMobile || scrolled
-                    ? "bg-white text-primary-black  border-primary-black"
-                    : "hover:bg-white hover:border-black hover:text-black bg-transparent text-white border-white"
-                }`}
+                className={`px-6 py-4 rounded-20 border-2 text-sm font-semibold
+                    "bg-transparente text-primary-black border-primary-black
+                    hover:bg-primary-orange hover:border-primary-orange hover:text-white`}
               >
                 Quero ser motorista
               </button>
